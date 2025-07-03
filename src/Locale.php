@@ -1,9 +1,9 @@
 <?php
 
-namespace Utyemma\SaasPro\Support;
+namespace SaasPro\Support;
 
-use Utyemma\SaasPro\Abstracts\Support;
-use Utyemma\SaasPro\Models\Country;
+use SaasPro\Abstracts\Support;
+use SaasPro\Models\Country;
 use Illuminate\Support\Facades\Http;
 
 class Locale extends Support {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Utyemma\SaasPro\Models;
+namespace SaasPro\Models;
 
-use Utyemma\SaasPro\Concerns\Models\HasStatus;
+use SaasPro\Concerns\Models\HasStatus;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 

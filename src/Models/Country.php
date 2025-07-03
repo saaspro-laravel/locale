@@ -1,11 +1,9 @@
 <?php
 
-namespace Utyemma\SaasPro\Models;
+namespace SaasPro\Models;
 
-use Utyemma\SaasPro\Concerns\Models\HasStatus;
-use Utyemma\SaasPro\Enums\PaymentGateways;
-use Utyemma\SaasPro\Support\Locale;
-use Illuminate\Database\Eloquent\Casts\AsEnumCollection;
+use SaasPro\Concerns\Models\HasStatus;
+use SaasPro\Support\Locale;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,7 +18,7 @@ class Country extends Model {
     function casts(){
         return [
             'is_default' => 'boolean',
-            'gateway' => PaymentGateways::class
+            // 'gateway' => PaymentGateways::class
         ];
     }
 
@@ -36,9 +34,9 @@ class Country extends Model {
         return $this->belongsTo(Currency::class, 'currency_code', 'code');
     }
 
-    function gateway(){
-        return $this->belongsTo(PaymentGateway::class, 'gateway', 'shortcode');
-    }
+    // function gateway(){
+    //     return $this->belongsTo(PaymentGateway::class, 'gateway', 'shortcode');
+    // }
 
     function getFlagAttribute(){
         return $this->getFirstMediaUrl('countries');
