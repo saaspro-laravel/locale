@@ -1,18 +1,16 @@
 <?php
 
-namespace Utyemma\SaasPro\Filament\Resources\Locale;
+namespace SaasPro\Locale\Filament\Resources;
 
-use Utyemma\SaasPro\Filament\Resources\Locale\CurrencyResource\Pages;
-use Utyemma\SaasPro\Filament\Forms\Components\SelectStatus;
-use Utyemma\SaasPro\Models\Currency;
-use Utyemma\SaasPro\Filament\Tables\Columns\StatusColumn;
+use SaasPro\Filament\Forms\Components\SelectStatus;
+use SaasPro\Filament\Tables\Columns\StatusColumn;
+use SaasPro\Locale\Filament\Resources\CurrencyResource\Pages;
+use SaasPro\Locale\Models\Currency;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CurrencyResource extends Resource
 {

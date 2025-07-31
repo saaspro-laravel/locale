@@ -1,13 +1,12 @@
 <?php
 
-namespace Utyemma\SaasPro\Filament\Resources\Locale;
+namespace SaasPro\Locale\Filament\Resources;
 
-use Utyemma\SaasPro\Filament\Resources\Locale\CountryResource\Pages;
-use Utyemma\SaasPro\Filament\Resources\CountryResource\RelationManagers;
-use Utyemma\SaasPro\Filament\Forms\Components\SelectCurrency;
-use Utyemma\SaasPro\Filament\Forms\Components\SelectStatus;
-use Utyemma\SaasPro\Models\Country;
-use Utyemma\SaasPro\Filament\Tables\Columns\StatusColumn;
+use SaasPro\Filament\Forms\Components\SelectStatus;
+use SaasPro\Filament\Tables\Columns\StatusColumn;
+use SaasPro\Locale\Filament\Resources\CountryResource\Pages;
+use SaasPro\Locale\Filament\Forms\Components\SelectCurrency;
+use SaasPro\Locale\Models\Country;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Toggle;
@@ -15,8 +14,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CountryResource extends Resource
 {

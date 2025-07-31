@@ -1,6 +1,6 @@
 <?php
 
-use Utyemma\SaasPro\Support\Locale;
+use SassPro\Locale\Facades\Locale;
 
 if(!function_exists('locale')) {
     function locale(){

@@ -1,8 +1,8 @@
 <?php
 
-namespace Utyemma\SaasPro\Filament\Resources\Locale\CountryResource\Pages;
+namespace SaasPro\Locale\Filament\Resources\CountryResource\Pages;
 
-use Utyemma\SaasPro\Filament\Resources\Locale\CountryResource;
+use SaasPro\Locale\Filament\Resources\CountryResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 

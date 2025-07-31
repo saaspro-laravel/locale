@@ -1,12 +1,11 @@
 <?php
 
-namespace SaasPro\Support;
+namespace SaasPro\Locale;
 
-use SaasPro\Abstracts\Support;
-use SaasPro\Models\Country;
 use Illuminate\Support\Facades\Http;
+use SaasPro\Locale\Models\Country;
 
-class Locale extends Support {
+class Locale {
 
     public function current(string $ip) {
         try {

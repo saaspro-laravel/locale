@@ -1,8 +1,8 @@
 <?php
 
-namespace Utyemma\SaasPro\Filament\Resources\Locale\CurrencyResource\Pages;
+namespace SaasPro\Locale\Filament\Resources\CurrencyResource\Pages;
 
-use Utyemma\SaasPro\Filament\Resources\Locale\CurrencyResource;
+use SaasPro\Locale\Filament\Resources\CurrencyResource;
 use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
 
