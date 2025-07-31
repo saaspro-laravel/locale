@@ -4,7 +4,6 @@ namespace SaasPro\Locale;
 
 use Filament\Panel;
 
-
 class PluginProvider {
 
     public function filament(Panel $panel){

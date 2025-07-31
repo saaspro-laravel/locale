@@ -3,7 +3,7 @@
 namespace SaasPro\Locale;
 
 use Illuminate\Support\ServiceProvider;
-use Locale;
+use \SaasPro\Locale\Locale;
 
 class LocaleServiceProvider extends ServiceProvider {
 
@@ -13,7 +13,6 @@ class LocaleServiceProvider extends ServiceProvider {
         $this->app->singleton('locale', function () {
             return new Locale();
         });
-
     }
 
     function boot(){

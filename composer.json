@@ -20,12 +20,12 @@
         "laravel": { 
             "providers": [
                 "SaasPro\\Locale\\LocaleServiceProvider"
-            ],
-            "saaspro": {
-                "providers": [
-                    "SaasPro\\Locale\\PluginProvider"
-                ]
-            }
+            ]
+        },
+        "saaspro": {
+            "providers": [
+                "SaasPro\\Locale\\PluginProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

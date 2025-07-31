@@ -1,9 +1,8 @@
 <?php
 
-namespace SaasPro\Locale\Filament\Forms\Components;
+namespace SaasPro\Locale\Filament\Forms;
 
 use SaasPro\Locale\Models\Currency;
-use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Select;
 
 class SelectCurrency extends Select {

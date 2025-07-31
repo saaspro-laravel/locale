@@ -3,9 +3,9 @@
 namespace SaasPro\Locale\Models;
 
 use SaasPro\Concerns\Models\HasStatus;
-use SaasPro\Support\Locale;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use SassPro\Locale\Facades\Locale;
 
 class Country extends Model {
     use HasStatus;
@@ -26,23 +26,19 @@ class Country extends Model {
         'is_default' => false
     ];
 
-    function scopeIsDefault($query){
+    public function scopeIsDefault($query){
         $query->where('is_default', true);
     }
 
-    function currency(){
+    public function currency(){
         return $this->belongsTo(Currency::class, 'currency_code', 'code');
     }
 
-    // function gateway(){
-    //     return $this->belongsTo(PaymentGateway::class, 'gateway', 'shortcode');
-    // }
-
-    function getFlagAttribute(){
+    public function getFlagAttribute(){
         return $this->getFirstMediaUrl('countries');
     }
 
-    static function current() {
+    public static function current() {
         $user = Auth::user();
         if($user && $user->country) return $user->country;
         
@@ -55,7 +51,7 @@ class Country extends Model {
 
     static function setCurrent(Country | null $country = null) {
         if($country) return session(['country_id' => $country->id]);
-        [$status, $message, $data] = (new Locale)->current(request()->ip());
+        [$status, $message, $data] = Locale::current(request()->ip());
         
         if($status) {
             if($country = Country::whereIsoCode($data['countryCode'])->first()) {

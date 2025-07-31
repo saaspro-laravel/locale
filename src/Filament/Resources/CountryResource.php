@@ -2,10 +2,9 @@
 
 namespace SaasPro\Locale\Filament\Resources;
 
-use SaasPro\Filament\Forms\Components\SelectStatus;
 use SaasPro\Filament\Tables\Columns\StatusColumn;
+use SaasPro\Locale\Filament\Forms\SelectCurrency;
 use SaasPro\Locale\Filament\Resources\CountryResource\Pages;
-use SaasPro\Locale\Filament\Forms\Components\SelectCurrency;
 use SaasPro\Locale\Models\Country;
 use Filament\Forms;
 use Filament\Forms\Components\Grid;
@@ -14,6 +13,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use SaasPro\Filament\Forms\Components\SelectStatus;
 
 class CountryResource extends Resource
 {
