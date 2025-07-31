@@ -10,7 +10,7 @@ use SassPro\Locale\Facades\Locale;
 class Country extends Model {
     use HasStatus;
     
-    protected $fillable = ['name', 'iso_code', 'iso_code_3', 'currency_code', 'intl_phone', 'gateway', 'is_default'];
+    protected $fillable = ['name', 'iso_code', 'iso_code_3', 'currency_code', 'intl_phone', 'is_default'];
 
     protected $primary_key = 'iso_code';
     public $incrementing = false;

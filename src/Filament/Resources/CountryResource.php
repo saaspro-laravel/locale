@@ -23,8 +23,7 @@ class CountryResource extends Resource
 
     protected static ?string $navigationGroup = 'Locale';
 
-    public static function form(Form $form): Form
-    {
+    public static function form(Form $form): Form {
         return $form
             ->schema([
                 Forms\Components\Toggle::make('is_default')
@@ -34,10 +33,26 @@ class CountryResource extends Resource
                     ->required()
                     ->columnSpanFull()
                     ->maxLength(255),
-                SelectCurrency::make('currency.name')
+                Grid::make(3)
+                    ->schema([
+                        Forms\Components\TextInput::make('iso_code')
+                            ->required()
+                            ->columnSpan(1)
+                            ->maxLength(2),
+                        Forms\Components\TextInput::make('iso_code_3')
+                            ->required()
+                            ->maxLength(3),
+                        Forms\Components\TextInput::make('intl_phone')
+                            ->prefix('+')
+                            ->placeholder('eg. 1')
+                            ->required()
+                            ->maxLength(3),
+                    ]),
+                SelectCurrency::make('currency')
                     ->relationship(name: 'currency', titleAttribute: 'name')
                     ->label("Currency")
                     ->native(false)
+                    ->columns(2)
                     ->createOptionForm([
                         Forms\Components\TextInput::make('name')
                             ->required(),
@@ -51,24 +66,24 @@ class CountryResource extends Resource
                         Toggle::make('is_default')
                             ->required(),
                     ]),
-                Forms\Components\Select::make('gateway')
-                    ->label("Payment Gateway")
-                    ->relationship('gateway', 'name')
-                    ->native(false),
-                Grid::make(3)
-                    ->schema([
-                        Forms\Components\TextInput::make('iso_code')
-                            ->required()
-                            ->maxLength(255),
-                        Forms\Components\TextInput::make('iso_code_3')
-                            ->required()
-                            ->maxLength(255),
-                        Forms\Components\TextInput::make('intl_phone')
-                            ->tel()
-                            ->prefix('+')
-                            ->required()
-                            ->maxLength(255),
-                    ]),
+                // Forms\Components\Select::make('gateway')
+                //     ->label("Payment Gateway")
+                //     ->relationship('gateway', 'name')
+                //     ->native(false),
+                // Grid::make(3)
+                //     ->schema([
+                //         Forms\Components\TextInput::make('iso_code')
+                //             ->required()
+                //             ->maxLength(255),
+                //         Forms\Components\TextInput::make('iso_code_3')
+                //             ->required()
+                //             ->maxLength(255),
+                //         Forms\Components\TextInput::make('intl_phone')
+                //             ->tel()
+                //             ->prefix('+')
+                //             ->required()
+                //             ->maxLength(255),
+                //     ]),
                 SelectStatus::make('status')
                     ->native(false)
                     ->required()
