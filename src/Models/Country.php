@@ -1,6 +1,6 @@
 <?php
 
-namespace SaasPro\Models;
+namespace SaasPro\Locale\Models;
 
 use SaasPro\Concerns\Models\HasStatus;
 use SaasPro\Support\Locale;
