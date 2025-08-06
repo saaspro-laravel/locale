@@ -8,6 +8,9 @@
         }
     ],
     "description": "Locale plugin for SaasPro",
+    "require": {
+        "saaspro/saaspro": "self.version"
+    },
     "autoload": {
         "psr-4": {
             "SaasPro\\Locale\\": "src/"
@@ -27,7 +30,5 @@
                 "SaasPro\\Locale\\PluginProvider"
             ]
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

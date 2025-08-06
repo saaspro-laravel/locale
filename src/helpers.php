@@ -1,6 +1,6 @@
 <?php
 
-use SassPro\Locale\Facades\Locale;
+use SaasPro\Locale\Locale;
 
 if(!function_exists('locale')) {
     function locale(){
